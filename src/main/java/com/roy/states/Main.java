@@ -1,5 +1,7 @@
 package com.roy.states;
 
+
+
 import org.springframework.statemachine.StateMachine;
 import org.springframework.statemachine.config.StateMachineBuilder;
 import org.springframework.statemachine.state.State;
@@ -14,6 +16,9 @@ public class Main {
         customStates.add(openState);
         CloseCustomState closeState = new CloseCustomState();
         customStates.add(closeState);
+
+
+
         StateMachineBuilder.Builder<CustomState, Event> builder = StateMachineBuilder.builder();
         builder.configureStates().withStates().initial(openState).states(customStates);
 
